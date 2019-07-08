@@ -1,20 +1,18 @@
-package Thread;
+package ThreadDeamon;
 
 public class Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		Printer printer=new Printer();
-		printer.setDaemon(true);
-		printer.start();
-		
-		for(int h=0;h<10;h++) {
-			
-			System.out.println("main " +Thread.currentThread().getName()+"  "+h);
-		}
-          System.out.println("===========================================================");
+        
+		 DeamonThread dThread=new DeamonThread();
+		 dThread.setDaemon(true);
+		 dThread.start();
+		 
+		 for(int i=0;i<10;i++) {
+			 
+			 System.out.println(Thread.currentThread().getName().toUpperCase().charAt(0)+ "ain   Thread "+ i);
+		 }
 	}
 
 }
